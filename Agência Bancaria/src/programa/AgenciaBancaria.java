@@ -17,12 +17,12 @@ public class AgenciaBancaria {
 
 	public static void operacoes() {
 
-		int operacao = Integer.parseInt(JOptionPane.showInputDialog("----Selecione uma operacao-----3 "
-				+ "\n 1 - Criar conta" + " \n 2- Depositar" + "\n 3 - Sacar"
-				+ "\n 4 - Transferir " + "\n 5 - Listar" + "\n 6 - Sair "));
+		int operacao = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma operacao: "
+				+ "\n 1)- Criar conta" + " \n 2)- Depositar" + "\n 3)- Sacar"
+				+ "\n 4)- Transferir " + "\n 5)- Listar" + "\n 6)- Sair "));
 
 		switch (operacao) {
-		case 1:
+		case 1: 
 			criarConta();
 			break;
 		case 2:
@@ -43,7 +43,7 @@ public class AgenciaBancaria {
 			System.exit(0);
 
 		default:
-			JOptionPane.showMessageDialog(null, "Opcao invalida!");
+			JOptionPane.showMessageDialog(null, " Opcao invalida! ");
 			operacoes();
 			break;
 
@@ -62,7 +62,7 @@ public class AgenciaBancaria {
 		Conta conta = new Conta(pessoa);
 
 		contasBancarias.add(conta);
-		JOptionPane.showMessageDialog(null, "Conta criada com Sucesso!");
+		JOptionPane.showMessageDialog(null, " Conta criada com Sucesso! ");
 		operacoes();
 	}
 
@@ -81,7 +81,7 @@ public class AgenciaBancaria {
 	}
 
 	public static void depositar() {
-		int numeroConta = Integer.parseInt(JOptionPane.showInputDialog("Numero da conta para deposito: "));
+		int numeroConta = Integer.parseInt(JOptionPane.showInputDialog(" Numero da conta para deposito: "));
 
 		Conta conta = encontrarConta(numeroConta);
 
